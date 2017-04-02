@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Always force latest IE rendering engine or request Chrome Frame -->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Use title if it's in the page YAML frontmatter -->
+    <title><%= current_page.data.title || "The Middleman" %></title>
+    <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/6655932/659046/css/fonts.css" />
+
+
+    <%= stylesheet_link_tag "normalize", "all" %>
+    <%= javascript_include_tag  "jquery" %>
+    <%= javascript_include_tag  "smoothState" %>
+    <%= javascript_include_tag  "all" %>
+    <%= javascript_include_tag  "pictures" %>
+  </head>
+
+  <body class="<%= page_classes %>">
+    <div id="main" class="animate-fadeIn">
+      <%= yield %>
+    </div>
+  </body>
+
+</html>
